@@ -1,0 +1,79 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* icons should have pointer */
+i{
+    cursor: pointer;
+    color: white;
+}
+
+.menu{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    opacity: 0.85;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 30vh;
+    margin-left: -100px;
+    visibility: hidden;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(210deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+ .menu-bar{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin-top: 15vh;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    visibility:visible;
+    opacity: 1;
+}
+
+.menu .menu-bar i:first-child {
+    margin-left: 52px;
+    font-size: 25px;
+}
+
+.menu .menu-bar i:nth-child(2) {
+    margin-left: 52px;
+    font-size: 25px;
+    display: none;
+}
+
+.menu .menu-bar i:hover{
+    animation: rotate 1s linear;
+}
+
+.menu-bar:hover i.fa-bars {
+    display: none; /* Hide the first icon when menu-bar is hovered */
+}
+
+.menu-bar:hover i.fa-x {
+    display: inline-block; /* Display the second icon when menu-bar is hovered */
+}
+
+.menu:hover{
+    visibility: visible;
+    opacity: 0.95;
+    transition: visibility 0s, opacity 1s ease; 
+}
+
+
+
